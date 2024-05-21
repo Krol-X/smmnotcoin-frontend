@@ -40,6 +40,7 @@
       color: inherit;
       background: rgba(0, 0, 0, 0.2);
 
+      padding: 0.1rem;
       font-size: 0.7em;
       display: flex;
       flex-direction: column;
