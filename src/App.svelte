@@ -1,5 +1,5 @@
 <script lang="ts">
-  import HomePage from '@pages/Home.svelte'
+  import MainPage from '@pages/Main.svelte'
   import FirstPage from '@pages/First.svelte'
   import SecondPage from '@pages/Second.svelte'
 
@@ -8,16 +8,16 @@
   import type { RouterConfig } from '@state/navigate.ts'
 
   const routes: RouterConfig = {
-    '/': HomePage,
+    '/': MainPage,
     '/first': FirstPage,
-    '/second': SecondPage
+    '/second/:param': SecondPage
   }
 </script>
 
 <nav>
   <a href="/" use:link>Home page</a>
   <a href="/first" use:link>First page</a>
-  <a href="/second" use:link>Second page</a>
+  <a href="/second/ok" use:link>Second page</a>
 </nav>
 
 <Router config={routes} />
