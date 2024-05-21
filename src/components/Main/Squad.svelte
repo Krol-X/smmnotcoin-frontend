@@ -23,9 +23,9 @@
 
 <style lang="scss">
   .squad {
-    height: 3rem;
+    height: 4rem;
     background: #202020;
-    padding: 0.5rem;
+    padding: 0.75rem;
     border-radius: 12px;
 
     display: flex;

@@ -32,19 +32,14 @@
 
 <style lang="scss">
   .container {
+    width: 100%;
     height: 100%;
-    color: white;
-    background: black;
-    padding: 1rem;
+    max-width: 1024px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-
-    > * {
-      max-width: 1024px;
-    }
 
     main {
       width: 100%;

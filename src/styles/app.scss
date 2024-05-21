@@ -6,6 +6,14 @@
   box-sizing: border-box;
 }
 
+a,
+a::before,
+a::after,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
 html,
 body,
 #app {
@@ -13,4 +21,13 @@ body,
   height: 100%;
   overflow: hidden;
   line-height: 1.1;
+}
+
+#app {
+  color: #F8F8F8;
+  background: black;
+  padding: 1rem;
+  
+  display: flex;
+  justify-content: center;
 }
