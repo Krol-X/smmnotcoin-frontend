@@ -16,19 +16,21 @@
     display: flex;
     gap: 0.25rem;
     align-items: center;
-    height: 3.5rem;
+    height: 3rem;
     font-weight: bold;
-    line-height: 1.3;
 
     .icon {
       height: 100%;
     }
-    .value {
-      font-size: 1.75rem;
-    }
-    .max-value {
-      font-size: 1.25rem;
-      color: #858482;
+    .info {
+      max-height: 100%;
+      .value {
+        font-size: 1.6rem;
+      }
+      .max-value {
+        font-size: 1.25rem;
+        color: #858482;
+      }
     }
   }
 </style>
