@@ -52,6 +52,4 @@
   }
 </script>
 
-<main>
-  <svelte:component this={current_component} {...params} />
-</main>
+<svelte:component this={current_component} {...params} />

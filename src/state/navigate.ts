@@ -48,6 +48,7 @@ window.onpopstate = (): void => {
  * Usage:
  * <a href="/example" use:link>Example</a>
  * <button use:link={() => customLogic()}>Navigate on Click</button>
+ * <a href="/example" use:link={(href) => customLogic(href)}>Another example</a>
  *
  * @param node The HTML element this action is attached to.
  * @param fun An optional function to decide if and where navigation should proceed.

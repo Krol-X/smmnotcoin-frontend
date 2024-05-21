@@ -4,6 +4,13 @@ import { svelte } from '@sveltejs/vite-plugin-svelte'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import './src/styles/global.scss';`,
+      },
+    },
+  },
   resolve: {
     alias: {
       '@modules': path.resolve(__dirname, './node_modules'),
