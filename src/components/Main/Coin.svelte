@@ -1,22 +1,31 @@
 <script lang="ts">
   import { onMount } from 'svelte'
 
-  export let size: number = '256px'
-  export let onclick: (event: MouseEvent) => void | null = null
+  export let size: number | string = '256px'
+  export let ontap: ((event: MouseEvent | TouchEvent) => void) | null = null
   let pressed: boolean = false
 
-  function onMouseUp(over_coin) {
+  function onTap(over_coin: boolean) {
     if (pressed) {
       pressed = false
-      if (over_coin) onclick()
+      if (over_coin && ontap) ontap()
     }
   }
 
   onMount(() => {
-    const mouse_up = (event) => onMouseUp()
+    const mouse_up = () => onTap(false)
+    const touch_end = () => onTap(false)
+
+    // Listen for mouse events
     document.addEventListener('mouseup', mouse_up)
+    // Listen for touch events
+    document.addEventListener('touchend', touch_end)
+    document.addEventListener('touchcancel', touch_end)
+
     return () => {
       document.removeEventListener('mouseup', mouse_up)
+      document.removeEventListener('touchend', touch_end)
+      document.removeEventListener('touchcancel', touch_end)
     }
   })
 </script>
@@ -26,7 +35,9 @@
     class="coin color-1"
     class:pressed
     on:mousedown={() => (pressed = true)}
-    on:mouseup={() => onMouseUp(true)}
+    on:mouseup={() => onTap(true)}
+    on:touchstart={() => (pressed = true)}
+    on:touchend={() => onTap(true)}
   >
     <div class="coin-inner"></div>
   </button>
