@@ -13,7 +13,10 @@
    * Matches the current path against the configured routes and returns the corresponding
    * component and extracted parameters.
    */
-  function matchRoute(path: string, config: RouterConfig): [typeof SvelteComponent, Record<string, string>] | null {
+  function matchRoute(
+    path: string,
+    config: RouterConfig
+  ): [typeof SvelteComponent, Record<string, string>] | null {
     // Decode the path to handle encoded characters
     const decodedPath = decodeURIComponent(path)
 
@@ -34,7 +37,7 @@
   function patternToRegex(pattern: string): RegExp {
     const regex = pattern
       .split('/')
-      .map(part => part.startsWith(':') ? '([^/]+)' : part)
+      .map((part) => (part.startsWith(':') ? '([^/]+)' : part))
       .join('/')
     return new RegExp(`^${regex}$`)
   }
@@ -43,7 +46,10 @@
    * Extracts the parameters from a matched path.
    */
   function extractParams(pattern: string, match: RegExpExecArray): Record<string, string> {
-    const paramNames = pattern.split('/').filter(part => part.startsWith(':')).map(part => part.substring(1))
+    const paramNames = pattern
+      .split('/')
+      .filter((part) => part.startsWith(':'))
+      .map((part) => part.substring(1))
     const params = {}
     paramNames.forEach((name, index) => {
       params[name] = match[index + 1] // match[0] is the full match, params start at index 1

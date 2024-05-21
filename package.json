@@ -9,8 +9,8 @@
     "preview": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "lint": "prettier --check src && eslint src",
-    "format": "prettier --write **/*.{js,ts,json,svelte}",
-    "format:watch": "onchange \"**/*.{js,ts,json,svelte}\" -- prettier --write {{changed}}"
+    "format": "prettier --write **/*.{js,ts,json,svelte,css,scss}",
+    "format:watch": "onchange \"**/*.{js,ts,json,svelte,css,scss}\" -- prettier --write {{changed}}"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^3.0.2",
