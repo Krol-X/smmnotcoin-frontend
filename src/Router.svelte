@@ -1,7 +1,7 @@
 <script lang="ts">
-  import NotFoundLayout from '@layouts/NotFound.svelte'
-  import { route } from '@state/navigate.ts'
-  import type { RouterConfig } from '@state/navigate.ts'
+  import NotFoundLayout from './pages/NotFound.svelte'
+  import { route } from './state/navigate.ts'
+  import type { RouterConfig } from './state/navigate.ts'
   import type { SvelteComponent } from 'svelte'
 
   export let config: RouterConfig = {}
