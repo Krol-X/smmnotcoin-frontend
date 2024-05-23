@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { link, navigate } from '@state/navigate.ts'
+  import { route, link, navigate } from '@state/navigate.ts'
 
 	export let items = [
 		{ text: 'Statistic', url: '/statistic', img: '#' },
@@ -8,11 +8,13 @@
 		{ text: 'Earn', url: '/tasks', img: '#' },
 		{ text: 'Boost', url: '/boosts', img: '#' }
 	]
+  
+  $: current_url = $route
 </script>
 
 <div class="navigation">
 	{#each items as {text, url, img}}
-		<button class="navigation__button" use:link={() => navigate(url)}>
+		<button class="navigation__button" class:active={current_url == url} use:link={() => navigate(url)}>
 			<img class="image" src={img} alt="">
 			<div class="text">{text}</div>
 		</button>
@@ -46,6 +48,10 @@
       flex-direction: column;
       align-items: center;
       gap: 0.1rem;
+      
+      &.active {
+        box-shadow: 0 0 10px 1px #d99e28;
+      }
 
       .image {
         flex-grow: 1;
