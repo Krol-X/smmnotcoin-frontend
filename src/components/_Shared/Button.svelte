@@ -9,9 +9,14 @@
 
 <style lang="scss">
   button {
-    padding: 1rem;
+    padding: 0;
+    height: 4rem;
     color: white;
-    background: none;
-    border: 2px solid #888;
+    background: #ff9800;
+    border: none;
+    
+    &:hover {
+      background: #ff7100;
+    }
   }
 </style>

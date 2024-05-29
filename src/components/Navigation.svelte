@@ -2,7 +2,7 @@
   import { route, link, navigate } from '@state/navigate.ts'
 
   export let items = [
-    { text: 'Statistic', url: '/statistic', img: '#' },
+    { text: 'Stats', url: '/statistic', img: '#' },
     { text: 'Refs', url: '/referrals', img: '#' },
     { text: 'Coin', url: '/', img: '#' },
     { text: 'Earn', url: '/tasks', img: '#' },

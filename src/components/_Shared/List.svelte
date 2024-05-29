@@ -1,9 +1,9 @@
-<script>
+<script lang="ts">
 </script>
 
 <div class="list"></div>
 
-<style>
+<style lang="scss">
   .list {
     height: 100%;
     

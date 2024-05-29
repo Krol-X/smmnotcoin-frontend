@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import Text from '@components/_shared/Text.svelte'
   import List from '@components/_shared/List.svelte'
   import Score from '@components/_shared/Score.svelte'
@@ -14,7 +14,7 @@
   <Button text="Upgrade/Buy" />
 </div>
 
-<style>
+<style lang="scss">
   .container {
     height: 100%;
 

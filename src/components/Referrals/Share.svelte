@@ -1,7 +1,7 @@
-<script>
+<script lang="ts">
 </script>
 
 <div></div>
 
-<style>
+<style lang="scss">
 </style>

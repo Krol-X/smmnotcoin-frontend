@@ -25,9 +25,13 @@ body,
 
 #app {
   color: #f8f8f8;
-  background: black;
+  background: #151414;
   padding: 1rem;
 
   display: flex;
   justify-content: center;
+}
+
+#app, button {
+  font-size: 1.25rem;
 }
