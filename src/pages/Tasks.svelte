@@ -1,6 +1,6 @@
 <script lang="ts">
-  import Text from '@components/_shared/Text.svelte'
-  import List from '@components/_shared/List.svelte'
+  import Text from '@components/shared/Text.svelte'
+  import List from '@components/shared/List.svelte'
 </script>
 
 <div class="container">

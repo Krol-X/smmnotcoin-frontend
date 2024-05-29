@@ -1,6 +1,6 @@
 <script lang="ts">
   import Squad from '@components/Main/Squad.svelte'
-  import Score from '@components/_shared/Score.svelte'
+  import Score from '@components/shared/Score.svelte'
   import Coin from '@components/Main/Coin.svelte'
   import Energy from '@components/Main/Energy.svelte'
 
