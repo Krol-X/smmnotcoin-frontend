@@ -31,16 +31,18 @@
 </script>
 
 <div class="coin-container" style="width: {size}; height: {size};">
-  <button
-    class="coin color-1"
+  <div class="coin-light color-1"></div>
+  <img
+    class="coin"
     class:pressed
     on:mousedown={() => (pressed = true)}
     on:mouseup={() => onTap(true)}
     on:touchstart={() => (pressed = true)}
     on:touchend={() => onTap(true)}
+    src="/images/coin1.png"
+    alt="Coin"
+    draggable="false"
   >
-    <div class="coin-inner"></div>
-  </button>
 </div>
 
 <style lang="scss">
@@ -48,13 +50,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 50%;
+    position: relative;
+
+    .coin-light {
+      z-index: 5;
+      position: absolute;
+      width: 90%;
+      height: 90%;
+      border-radius: 50%;
+    }
 
     .coin {
+      z-index: 10;
       width: 100%;
       height: 100%;
-      border-radius: 50%;
-      background: #ffdc00;
-      border: thin solid #d99e28;
 
       display: flex;
       justify-content: center;
@@ -64,23 +74,16 @@
         width: 95%;
         height: 95%;
       }
-
-      .coin-inner {
-        width: 80%;
-        height: 80%;
-        border-radius: 50%;
-        background: linear-gradient(to right, #fdd90a, #fea801);
-        border: 2px solid #e29b00;
-      }
     }
   }
 
-  .coin.color-1 {
+  .color-1 {
     box-shadow:
-      -4px 4px 2px 0px #e29b00,
+      /*-4px 4px 2px 0px #e29b00,*/
       0 0 100px 20px #d99e28;
+    /*filter: drop-shadow(0px 0px 10px #d99e28);*/
   }
-  .coin.color-2 {
+  .color-2 {
     box-shadow:
       -4px 4px 2px 0px #e29b00,
       0 0 100px 20px #7890c8;
