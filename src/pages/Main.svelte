@@ -1,6 +1,6 @@
 <script lang="ts">
   import Squad from '@components/Main/Squad.svelte'
-  import League from '@components/Main/League.svelte'
+  import Score from '@components/_shared/Score.svelte'
   import Coin from '@components/Main/Coin.svelte'
   import Energy from '@components/Main/Energy.svelte'
 
@@ -9,7 +9,7 @@
 
 <div class="container">
   <Squad />
-  <League />
+  <Score />
   <div class="coin-place">
     <Coin onclick={onCoinClick} />
   </div>

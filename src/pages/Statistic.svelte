@@ -1,9 +1,19 @@
-<script lang="ts">
+<script>
+  import Text from '@components/_shared/Text.svelte'
+  import List from '@components/_shared/List.svelte'
 </script>
 
-<div class="statistic">
-  <div class=""></div>
+<div class="container">
+  <Text center="Statistic" />
+  <List />
 </div>
 
-<style lang="scss">
+<style>
+  .container {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
 </style>

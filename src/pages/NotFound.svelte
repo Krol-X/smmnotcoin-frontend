@@ -4,7 +4,7 @@
 
 <div class="container">
   <div class="text">404</div>
-  <a href='/' class="link" use:link>Return to game</a>
+  <a href="/" class="link" use:link>Return to game</a>
 </div>
 
 <style lang="scss">
@@ -16,7 +16,7 @@
     gap: 1rem;
     justify-content: center;
     align-items: center;
-    
+
     .text {
       font-size: 4rem;
       font-weight: bold;

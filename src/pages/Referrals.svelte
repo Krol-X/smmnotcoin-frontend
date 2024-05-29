@@ -4,7 +4,7 @@
 </script>
 
 <div class="container">
-  <Text center="Earn" />
+  <Text center="Referrals" />
   <List />
 </div>
 

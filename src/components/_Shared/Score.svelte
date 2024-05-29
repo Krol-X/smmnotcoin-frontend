@@ -12,7 +12,7 @@
     {score}
   </div>
   <div class="name">
-    {name}&nbsp;&nbsp;>
+    {name}
   </div>
 </div>
 

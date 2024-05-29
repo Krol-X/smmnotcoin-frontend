@@ -2,7 +2,7 @@
   import MainPage from '@pages/Main.svelte'
   import SquadPage from '@pages/Squad.svelte'
   import StatisticPage from '@pages/Statistic.svelte'
-  import ReferencesPage from '@pages/References.svelte'
+  import ReferralsPage from '@pages/Referrals.svelte'
   import TasksPage from '@pages/Tasks.svelte'
   import TaskPage from '@pages/Task.svelte'
   import BoostsPage from '@pages/Boosts.svelte'
@@ -16,7 +16,7 @@
     '/': MainPage,
     '/squad': SquadPage,
     '/statistic': StatisticPage,
-    '/references': ReferencesPage,
+    '/referrals': ReferralsPage,
     '/tasks': TasksPage,
     '/task/:id': TaskPage,
     '/boosts': BoostsPage
