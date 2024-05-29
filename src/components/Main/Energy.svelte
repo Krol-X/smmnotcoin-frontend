@@ -1,6 +1,10 @@
 <script lang="ts">
-  export let value = 0
-  export let max_value = 0
+  import type { Account } from '@state/types.ts'
+
+  export let store: writable<Account> | null = null
+
+  $: value = store ? $store.energy : ''
+  $: max_value = store ? $store.max_energy : ''
 </script>
 
 <div class="energy">

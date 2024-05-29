@@ -6,8 +6,15 @@
 
   import { accountStore } from '@state/stores.ts'
 
+  $: energy = $accountStore.energy
+  $: tap_rate = $accountStore.tap_rate
+
   function onCoinTap() {
-    accountStore.update(it => ({...it, balance: it.balance + 1}))
+    if (energy) {
+      accountStore.update(it => ({
+        ...it, balance: it.balance + tap_rate, energy: it.energy - tap_rate
+      }))
+    }
   }
 </script>
 
@@ -17,7 +24,7 @@
   <div class="coin-place">
     <Coin ontap={onCoinTap} />
   </div>
-  <Energy />
+  <Energy store={accountStore} />
 </div>
 
 <style lang="scss">

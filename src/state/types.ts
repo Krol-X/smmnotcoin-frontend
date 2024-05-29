@@ -7,10 +7,7 @@ export interface User {
 export interface Account {
   balance: number;
   league: string;
-}
-
-export interface Rates {
-  tap_rate: number;
   energy: number;
+  tap_rate: number;
   max_energy: number;
 }
