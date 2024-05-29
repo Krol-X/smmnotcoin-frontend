@@ -1,18 +1,16 @@
 <script lang="ts">
   import type { Account } from '@state/types.ts'
+  import Bar from './Energy/Bar.svelte'
 
   export let store: writable<Account> | null = null
 
   $: value = store ? $store.energy : ''
-  $: max_value = store ? $store.max_energy : ''
+  $: max = store ? $store.max_energy : ''
 </script>
 
 <div class="energy">
   <img class="icon" src="/images/energy.png" alt="Energy" />
-  <div class="info">
-    <div class="value">{value}</div>
-    <div class="max-value">/ {max_value}</div>
-  </div>
+  <Bar {value} {max} />
 </div>
 
 <style lang="scss">
