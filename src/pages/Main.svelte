@@ -4,14 +4,18 @@
   import Coin from '@components/Main/Coin.svelte'
   import Energy from '@components/Main/Energy.svelte'
 
-  function onCoinClick() {}
+  import { accountStore } from '@state/stores.ts'
+
+  function onCoinTap() {
+    accountStore.update(it => ({...it, balance: it.balance + 1}))
+  }
 </script>
 
 <div class="container">
   <Squad />
-  <Score />
+  <Score store={accountStore} />
   <div class="coin-place">
-    <Coin onclick={onCoinClick} />
+    <Coin ontap={onCoinTap} />
   </div>
   <Energy />
 </div>

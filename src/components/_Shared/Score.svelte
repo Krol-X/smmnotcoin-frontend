@@ -1,10 +1,12 @@
-<script>
+<script lang="ts">
   import { formatNumberWithPadding } from '@utils/math.ts'
+  import { writable } from 'svelte/store'
+  import type { Account } from '@state/types.ts'
 
-  export let score_store = null
-  export let name = 'Bronze'
+  export let store: writable<Account> | null = null
 
-  $: score = formatNumberWithPadding(score_store ? $score_store : 0, 5)
+  $: score = formatNumberWithPadding(store ? $store.balance : 0, 5)
+  $: league = store ? $store.league : ''
 </script>
 
 <div class="league">
@@ -12,7 +14,7 @@
     {score}
   </div>
   <div class="name">
-    {name}
+    {league}
   </div>
 </div>
 
